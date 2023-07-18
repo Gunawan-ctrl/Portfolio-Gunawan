@@ -2,7 +2,6 @@
   <main class="navbar dark:from-slate-900 dark:to-slate-900">
     <section class="navbar-brand">
       <div class="flex items-center gap-3">
-        <!-- <img src="/gunawan-transformed.png" width="30" class="rounded-full" /> -->
         <h1
           class="text-indigo-700 dark:text-indigo-400 text-xl font-semibold lg:text-3xl"
         >
@@ -24,11 +23,11 @@
           ><i class="fa fa-times text-gray-50"></i
         ></span>
         <template v-for="(menu, x) in menus" :key="x">
-          <li
+          <button
             class="text-gray-100 md:text-indigo-600 dark:md:text-indigo-400 font-medium duration-300 active:scale-[.85]"
           >
             <a @click="changeMenu(menu)">{{ menu.name }}</a>
-          </li>
+          </button>
         </template>
         <!-- Dark mode -->
         <dark-mode-toggler></dark-mode-toggler>
